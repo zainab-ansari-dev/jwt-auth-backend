@@ -37,9 +37,9 @@ async function handleUserLogin(req, res) {
     console.log(`token: ${token}`);
     return res.cookie("token", token,{
     httpOnly: true, 
-    secure: false, //set to True only in production
-    sameSite: 'lax' // Required for cross-origin local development
-    }).json({message:"Login successful!", token}); // It is usually better to pass an object {} inside .json() rather than a plain string.
+    secure: false, 
+    sameSite: 'lax' 
+    }).json({message:"Login successful!", token}); 
   } catch (error) {
     console.log(error);
     return res.status(400).json({ message: "Incorrect Email or Password" });
