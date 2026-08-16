@@ -10,7 +10,7 @@ document.querySelector(".login-form").addEventListener("submit", async (e) => {
       method: "POST",
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify({ email, password }),
-      credentials: 'include' // 👈 CRITICAL: Tells the browser to accept/send cookies
+      credentials: 'include' 
     });
 
     const data = await response.json();
