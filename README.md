@@ -1,46 +1,49 @@
-# Node.js Authentication API (JWT & MongoDB)
+# Express JWT Authentication API
 
-A secure backend authentication service built with **Node.js**, **Express**, and **MongoDB**. This repository demonstrates industry-standard security practices for handling user identity, including one-way password hashing prior to database storage and stateless session management via JSON Web Tokens (JWT).
+[![Node.js Version](https://img.shields.io/badge/node-%3E%3D18.0.0-brightgreen.svg)](https://nodejs.org/)
+[![Express.js](https://img.shields.io/badge/express-4.x-blue.svg)](https://expressjs.com/)
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](LICENSE)
+[![Build Status](https://img.shields.io/badge/build-passing-brightgreen.svg)](#)
 
----
+A secure, production-ready RESTful authentication service built with **Node.js**, **Express**, and **JSON Web Tokens (JWT)**. This repository provides end-to-end user signup and login workflows, complete with password hashing prior to database persistence and JWT issuance for stateless request authorization.
 
-## 📹 Sign-In Demo
+## Features
 
-![Sign-In Demo]
-
-> *Screen recording demonstrating user sign-in, token generation, and authentication flow.*
-
----
-
-## ✨ Features
-
-* **JWT Authorization:** Issues signed JSON Web Tokens upon successful login to authorize protected API routes via Bearer headers.
-* **Password Hashing:** Passwords are salted and hashed using `bcrypt` before being stored in MongoDB, ensuring plain-text credentials are never exposed or saved.
-* **Database Persistence:** Mongoose user schemas enforce structural data validation and unique constraint checks for email accounts.
-* **Protected Middleware:** Custom route protection middleware validates incoming JWT signatures and extracts user context.
-* **Sanitized Responses:** API responses strictly strip out sensitive data (hashes, salts) before sending responses to the client.
+- **Stateless Authentication**: Uses signed JSON Web Tokens (JWT) for secure session management.
+- **Secure Password Hashing**: Passwords are salted and hashed using `bcrypt` / `argon2` before storing in the database.
+- **Robust Input Validation**: Validates user registration payload (email format, password strength) prior to processing.
+- **Clean Architecture**: Modular controller-service-route pattern for high maintainability.
+- **Environment Driven**: Centralized configuration management using `.env`.
 
 ---
 
-## 🛠 Tech Stack
+## Getting Started
 
-| Technology | Role |
-| :--- | :--- |
-| **Node.js** | JavaScript runtime environment |
-| **Express.js** | Web framework for API route management |
-| **MongoDB / Mongoose** | NoSQL database & ODM modeling |
-| **jsonwebtoken** | Token creation and verification |
-| **bcryptjs** | Salt generation and password hashing |
-| **dotenv** | Environment variable management |
+### Prerequisites
 
----
+- [Node.js](https://nodejs.org/) (v18.0.0 or higher)
+- [npm](https://www.npmjs.com/) or [yarn](https://yarnpkg.com/)
+- Database instance (e.g., MongoDB / PostgreSQL / MySQL)
 
-## ⚙️ Environment Variables
+### Installation
 
-Create a `.env` file in the root directory and define the following variables:
+1. **Clone the repository**
+   ```bash
+   git clone [https://github.com/your-username/express-jwt-auth.git](https://github.com/your-username/express-jwt-auth.git)
+   cd express-jwt-auth
+2. **Install the dependencies**
+   ```bash
+   npm install
+3. **Set up the environment variables**
+    Create a .env file in the project root directory and add the following configuration:
+   ```bash
+   PORT=8000
+   DATABASE_URL=mongodb://localhost:27017/your_db_name
+   JWT_SECRET=your_jwt_secret_key_here
+4. **Start the application**
+   ```bash
+   #go live using the VS Code extension
 
-```env
-PORT=5000
-MONGO_URI=mongodb://127.0.0.1:27017/auth_demo
-JWT_SECRET=your_jwt_secret_key_here
-JWT_EXPIRES_IN=1d
+   #run in the back-end folder:
+   npm start 
+   
