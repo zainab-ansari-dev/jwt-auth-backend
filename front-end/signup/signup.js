@@ -18,8 +18,8 @@ document.querySelector('.sign-in-form').addEventListener("submit",async (e)=>
     {
         const response = await fetch(`${API_url}/signup`,{
             method : 'POST',
-            headers : {'Content-Type' : 'application/json'}, //tells the backend we are sending json data
-            body : JSON.stringify({fullName, email, password}) //convert JS object to string
+            headers : {'Content-Type' : 'application/json'}, 
+            body : JSON.stringify({fullName, email, password}) 
         });
 
         const data = await response.json();
