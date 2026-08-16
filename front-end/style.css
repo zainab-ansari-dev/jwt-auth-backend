@@ -1,0 +1,130 @@
+body{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+.main-container
+{
+    height: 100vh;
+    background-color: rgb(78, 110, 110);
+    width: 100vw;
+}
+
+.home-page-nav
+{
+    background-color: aliceblue;
+    height: 50px;
+    width: 100vw;
+    display: flex;
+    flex-direction: row;
+    justify-content: start;
+    align-items: center;
+    gap:20px;
+}
+
+a{
+    size: 15px;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    margin-left : 20px;
+    font-size: 20px;
+    color: rgb(66, 65, 65);
+}
+
+input{
+    height: 30px ;
+}
+
+
+/* signin styling */
+
+.sign-in-page{
+    height: 60vh;
+    width: 45vw;
+    background-color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.sign-in-form
+{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 350px;
+    gap: 10px;
+}
+
+
+.submit-signin-form{
+    height: 30px;
+    width: 200px;
+    border-radius: 50px;
+    border: 0;
+    background-color: rgb(55, 118, 189);
+    color: white;
+    font-size: 18px;
+    align-self: center ;
+}
+
+
+/* login styling */
+
+.login-page
+{
+    height: 60vh;
+    width: 45vw;
+    background-color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+}
+
+.login-form
+{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+   
+    width: 350px;
+    gap: 10px;
+}
+
+.submit-login-form
+{
+    height: 30px;
+    width: 200px;
+    border-radius: 50px;
+    border: 0;
+    background-color: rgb(55, 118, 189);
+    color: white;
+    font-size: 18px;
+    align-self: center ;
+}
+
+input{
+    height: 30px ;
+}
+
+.signin-container
+{
+    height: 100vh;
+    width: 100vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.login-container
+{
+    height: 100vh;
+    width: 100vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
