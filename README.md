@@ -29,7 +29,7 @@ A secure, production-ready RESTful authentication service built with **Node.js**
 
 1. **Clone the repository**
    ```bash
-   git clone [https://github.com/your-username/express-jwt-auth.git](https://github.com/your-username/express-jwt-auth.git)
+   git clone https://github.com/zainab-ansari-dev/express-jwt-auth.git
    cd express-jwt-auth
 2. **Install the dependencies**
    ```bash
