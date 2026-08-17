@@ -10,7 +10,7 @@ A secure, production-ready RESTful authentication service built with **Node.js**
 ## Features
 
 - **Stateless Authentication**: Uses signed JSON Web Tokens (JWT) for secure session management.
-- **Secure Password Hashing**: Passwords are salted and hashed using `bcrypt` / `argon2` before storing in the database.
+- **Secure Password Hashing**: Passwords are salted and hashed using `scrypt` before storing in the database.
 - **Robust Input Validation**: Validates user registration payload (email format, password strength) prior to processing.
 - **Clean Architecture**: Modular controller-service-route pattern for high maintainability.
 - **Environment Driven**: Centralized configuration management using `.env`.
